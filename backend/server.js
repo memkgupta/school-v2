@@ -38,7 +38,9 @@ app.use('/api/v1/teacher',teacherRouter);
 app.use('/api/v1/exam',examRouter);
 app.use('/api/v1/fee',feeRouter);
 app.use('/api/v1/bulk-upload',bulkRouter)
-app.get('/',(req,res)=>{res.send("Hello")})
+app.get('/',(req,res)=>{
+  res.json("Hello")
+})
 app.listen(port,()=>{
     console.log("Application Started");
 });
