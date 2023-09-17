@@ -49,7 +49,7 @@ navigate('/login',{replace:true})
 },[])
   return (
     <>
-       <Navbar></Navbar>
+      { user.user.role==="Admin"&&<Navbar></Navbar>}
   <Routes >
 
     <Route path='/' element={user.user.role==="Admin"?<Home></Home>:<TeacherPanel></TeacherPanel>} errorElement={<ErrorPage />}></Route>
