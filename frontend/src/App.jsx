@@ -31,7 +31,7 @@ import TeacherPanel from './routes/TeacherPanel';
 
 function App() {
 
-  const state = useSelector(state=>state.user)
+
 const dispatch = useDispatch();
 const token = useToken();
 const navigate = useNavigate();
@@ -52,7 +52,7 @@ navigate('/login',{replace:true})
       { user.user.role==="Admin"&&<Navbar></Navbar>}
   <Routes >
 
-    <Route path='/' element={user.user.role==="Admin"?<Home></Home>:<TeacherPanel></TeacherPanel>} errorElement={<ErrorPage />}></Route>
+    <Route path='/' element={<Home></Home>} errorElement={<ErrorPage />}></Route>
     <Route path='/login' element={<Login></Login>} errorElement={<ErrorPage />}/>
     <Route path='/students' element={<Students></Students>} errorElement={<ErrorPage />}/>
     <Route path='/student/new' element={<NewStudent></NewStudent>} errorElement={<ErrorPage />}/>
